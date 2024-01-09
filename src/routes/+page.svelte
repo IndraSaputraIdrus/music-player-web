@@ -19,20 +19,20 @@
 	});
 </script>
 
-<main class="flex min-h-svh items-center justify-center py-20">
-	<div class="max-w-[700px] overflow-hidden rounded-lg shadow-xl">
-		<div class="flex gap-6 bg-[#1b1b1b] p-12 text-white opacity-90">
+<main class="flex min-h-svh items-center justify-center p-5 md:px-0 md:py-20">
+	<div class="min-w-[375px] max-w-[700px] overflow-hidden rounded-lg shadow-xl">
+		<div class="flex gap-6 bg-[#1b1b1b] p-12 text-white opacity-90 flex-col md:flex-row">
 			<img
 				src="/Meghan_Trainor_-_Better_When_I'm_Dancin'.png"
 				alt="meghan-trainor"
-				class="aspect-square h-[220px] rounded object-cover"
+				class="aspect-square w-full md:w-auto md:h-[220px] rounded object-cover"
 			/>
 
 			<div class="grow">
 				<span class="mb-1 inline-block text-base font-semibold opacity-40"
 					>Meghan Trainor &bull; The Peanuts Movie (2015)</span
 				>
-				<h1 class="text-3xl font-semibold">Better When I'm Dancin'</h1>
+				<h1 class="text-2xl md:text-3xl font-semibold">Better When I'm Dancin'</h1>
 
 				<div class="my-6">
 					<input type="range" class="h-1 w-full accent-[#71C6FF]" bind:value={duration} min="0" max="29" />
@@ -41,12 +41,12 @@
 						<p>0:29</p>
 					</div>
 				</div>
-				<div class="grid grid-cols-6 place-items-center gap-5">
-					<button class="justify-self-start transition hover:opacity-70">
+				<div class="grid md:grid-cols-6 place-items-center gap-5 grid-cols-2">
+					<button class="justify-self-start transition hover:opacity-70 col-start-1 row-start-2 md:col-auto md:row-auto">
 						<Bookmark />
 					</button>
-					<div class="col-span-4 flex items-center gap-5">
-						<button class="transition hover:opacity-70">
+					<div class="md:col-span-4 flex items-center gap-5 col-span-2 justify-between w-full">
+						<button class="transition hover:opacity-70 opacity-40">
 							<Shuffle />
 						</button>
 						<button class="transition hover:opacity-70">
@@ -58,11 +58,11 @@
 						<button class="transition hover:opacity-70">
 							<SkipForward />
 						</button>
-						<button class="transition hover:opacity-70">
+						<button class="transition hover:opacity-70 opacity-40">
 							<Repeat />
 						</button>
 					</div>
-					<button class="justify-self-end transition hover:opacity-70">
+					<button class="justify-self-end transition hover:opacity-70 col-start-2 row-start-2 md:col-auto md:row-auto">
 						<Volume2 />
 					</button>
 				</div>
